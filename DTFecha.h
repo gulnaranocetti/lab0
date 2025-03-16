@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#ifndef DTFECHA.h
+#define DTFECHA.h
 
 class DTFecha {
 
@@ -23,3 +25,5 @@ class DTFecha {
 
     std::string toString(); //devuelve un string de fecha en el formato XX/XX/XXXX
 };
+
+#endif

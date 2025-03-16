@@ -1,7 +1,9 @@
 #include <iostream>
 #include <string>
-#include <DTFecha.h>
+#include <"DTFecha.h">
 #include <set>
+#ifndef DTFECHA.h
+#define DTFECHA.h
 
 class DTRefer{
 
@@ -27,3 +29,5 @@ class DTRefer{
 
     std::set getAutores();  //devuelve el set de los autores relacionados a la publicacion
 };
+
+#endif
