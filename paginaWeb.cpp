@@ -18,8 +18,7 @@ std::string paginaWeb::getCont();{
     return this->contenidoExtraido;
 }
 
-paginaWeb::paginaWeb(std::string doi, std::string titulo, DTFecha fecha, std::string url, std::string contenidoExtraido){
-    Publicacion(doi, titulo, fecha);
+paginaWeb::paginaWeb(std::string doi, std::string titulo, DTFecha fecha, std::string url, std::string contenidoExtraido) : Publicacion(doi, titulo, fecha);{
     this->url = url;
     this->contenidoExtraido = contenidoExtraido;
 } 
