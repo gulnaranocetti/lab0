@@ -2,8 +2,8 @@
 #include <string>
 #include <"DTFecha.h">
 #include <set>
-#ifndef DTFECHA.h
-#define DTFECHA.h
+#ifndef DTREFER.h
+#define DTREFER.h
 
 class DTRefer{
 
