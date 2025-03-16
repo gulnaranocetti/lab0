@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-#ifndef DTFECHA.h
-#define DTFECHA.h
+#ifndef DTFECHA_h
+#define DTFECHA_h
 
 class DTFecha {
 
