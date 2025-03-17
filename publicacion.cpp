@@ -37,7 +37,7 @@ std::string Publicacion::getTitulo() {
 };
 
 DTFecha Publicacion::getFecha() {
-    return this->fecha //esto funciona???
+    return this->fecha; //esto funciona???
 };
 
 Publicacion::~Publicacion() {
