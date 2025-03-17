@@ -43,3 +43,7 @@ std::list<std::string> Investigador::listarPublicaciones(DTFecha desde, std::str
 void Investigador::toString(){
    std::cout << ORCID << "->" << nombre << "/" << institucion << "."<< std::endl;
 }
+
+Investigador::~Investigador(){
+    publicaciones.clear();
+}

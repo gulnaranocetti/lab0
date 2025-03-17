@@ -18,15 +18,21 @@ class Investigador{
     
     public:
       Investigador(std::string, std::string, std::string);
+
       void setORCID(std::string);
       void setNombre(std::string);
       void setInstitucion(std::string);
       void setPublicacion(Publicacion&);
+
       std::string getORCID();
       std::string getNombre();
       std::string getInstitucion();
+
       std::list<std::string> listarPublicaciones(DTFecha, std::string); //lista de string con doi de publicaciones
       void toString();
+
+      ~Investigador();
+
 };
 
 #endif INVESTIGADOR_H
