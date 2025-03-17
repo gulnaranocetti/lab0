@@ -9,7 +9,7 @@ DTRefer(){
 DTRefer(std::string codigo, std::string title, DTFecha f, std::set<std::string> autors){ //constructor por parametros
     this->DOI = codigo;
     this->titulo = title;
-    this->fecha = DTFecha(f.getDia(), f.getMes(), f.getAño());
+    this->fecha = DTFecha(f.getDia(), f.getMes(), f.getAnio());
     this->autores(autors);
 }
 std::string getDOI(){ return this->DOI; } //devuelve el codigo DOI de la publicacion referida
