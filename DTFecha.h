@@ -7,7 +7,7 @@ class DTFecha {
 
     private:
 
-    int Dia, Mes, Año;
+    int Dia, Mes, Anio;
 
     public:
 
@@ -17,7 +17,7 @@ class DTFecha {
 
     int getDia();
 
-    int getAño();
+    int getAnio();
 
     int getMes();
 
