@@ -18,11 +18,11 @@ int DTFecha::getAnio(){ return this->Anio; }
 
 int DTFecha::getMes(){ return this->Mes; }
 
-int DTFecha::comparar(DTFecha f2){
+int DTFecha::comparar(DTFecha& f2){
 
-    if (this->Anio > f2.getAño()){ return 1; }
+    if (this->Anio > f2.getAnio()){ return 1; }
 
-    if (this->Anio < f2.getAño()){ return -1; }
+    if (this->Anio < f2.getAnio()){ return -1; }
 
     if (this->Mes > f2.getMes()){ return 1; }
 
@@ -36,3 +36,22 @@ int DTFecha::comparar(DTFecha f2){
 }
 
 std::string DTFecha::toString(){ return this->Dia + '/' + this->Mes + '/' + this->Anio; }
+
+bool DTFecha::operator==(DTFecha& f){ return f.comparar(this) == 0; }
+
+bool DTFecha::operator!=(DTFecha& f){ return f.comparar(this) != 0; }
+
+bool DTFecha::operator>(DTFecha& f){ return f.comparar(this) == 1; }
+
+bool DTFecha::operator<(DTFecha& f){ return f.comparar(this) == -1; }
+
+void DTFecha::operator=(DTFecha& f){
+    
+    if (this != f){
+
+        this->Dia = f.getDia();
+        this->Mes = f.getMes();
+        this->Anio = f.getAnio();
+
+    }
+}

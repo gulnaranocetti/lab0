@@ -2,6 +2,7 @@
 #include <string>
 #include "DTFecha.h"
 #include <set>
+
 #ifndef DTREFER_h
 #define DTREFER_h
 
@@ -19,7 +20,7 @@ class DTRefer{
 
     DTRefer();
 
-    DTRefer(std::string, std::string, DTFecha, std::set); //constructor por parametros
+    DTRefer(std::string, std::string, DTFecha, std::set<std::string>); //constructor por parametros
 
     std::string getDOI(); //devuelve el codigo DOI de la publicacion referida
 
