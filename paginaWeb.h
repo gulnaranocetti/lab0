@@ -1,8 +1,10 @@
+#ifndef PAGINAWEB_H
+#define PAGINAWEB_H
+
 #include <iostream>
 #include <string>
 #include <vector>
-#ifndef PAGINAWEB.h
-#define PAGINAWEB.h
+#include "publicacion.h"	
 
 class paginaWeb : public Publicacion {
     private:
@@ -19,4 +21,6 @@ class paginaWeb : public Publicacion {
         void setCont(std::string);
         std::string getUrl();
         std::string getCont();
-}; #endif
+}; 
+
+#endif
