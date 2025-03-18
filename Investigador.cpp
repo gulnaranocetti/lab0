@@ -16,10 +16,10 @@ void Investigador::setInstitucion(std::string ins){
     institucion = ins;
 }
 
-void Investigador::setPublicacion(Publicacion& pub){ 
-    publicaciones.push_back(&pub);
+void Investigador::setPublicacion(Publicacion* pub){ 
+    publicaciones.push_back(pub);
 }
-
+ 
 std::string Investigador::getORCID(){
     return ORCID;
 }
