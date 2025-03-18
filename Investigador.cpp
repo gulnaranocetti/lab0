@@ -1,5 +1,5 @@
 #include "Investigador.h"
-
+#include "Publicacion.h"
 
 Investigador::Investigador(std::string ORCID, std::string nombre, std::string institucion) : ORCID(ORCID), nombre(nombre), institucion(institucion){
 }

@@ -1,4 +1,3 @@
-
 #include "ArticuloRevista.h"
 
 ArticuloRevista::ArticuloRevista() {
@@ -27,7 +26,7 @@ void ArticuloRevista::setExtracto(std::string _extracto) {
     extracto = _extracto;
 }
 
-bool ArticuloRevista::contienePalabra(std::string palabra) {
+bool ArticuloRevista::contienePalabra(std::string palabra) const {
     return (titulo.find(palabra) != std::string::npos || revista.find(palabra) != std::string::npos || extracto.find(palabra) != std::string::npos);
 }
 

@@ -6,16 +6,16 @@
 #include <vector>
 #include "Publicacion.h"	
 
-class paginaWeb : public Publicacion {
+class PaginaWeb : public Publicacion {
     private:
     std::string url, contenidoExtraido;
 
     public:
-        ~paginaWeb();
+        ~PaginaWeb();
 
-        paginaWeb(std::string, std::string, DTFecha, std::string, std::string);
+        PaginaWeb(std::string, std::string, DTFecha, std::string, std::string);
 
-        bool contienePalabra(std::string);
+        bool contienePalabra(std::string) const override;
 
         void setUrl(std::string);
         void setCont(std::string);
