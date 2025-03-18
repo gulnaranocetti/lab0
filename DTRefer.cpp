@@ -20,3 +20,19 @@ std::string DTRefer::getTitulo(){ return this->titulo; }
 DTFecha DTRefer::getFecha(){ return this->fecha; }
 
 std::set<std::string> DTRefer::getAutores(){ return this->autores; }
+
+std::string DTRefer::getAutoresString() {
+    std::string setString = "";
+    for (auto it = this->autores.begin(); it != this->autores.end(); it++) {
+        if (*it == *this->autores.rbegin())
+            setString += *it;
+        else
+            setString += *it + ',';
+    }
+    return setString;
+}
+
+std::ostream &operator<<(std::ostream &os, DTRefer &refer) {
+    os << refer.getDOI() << "->" << refer.getTitulo() << "(" << (refer.getFecha()).toString() << ")/" << refer.getAutoresString();
+    return os;
+}
