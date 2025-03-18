@@ -35,4 +35,4 @@ class Investigador{
 
 };
 
-#endif INVESTIGADOR_H
+#endif

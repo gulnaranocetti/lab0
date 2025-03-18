@@ -28,7 +28,7 @@ class DTRefer{
 
     DTFecha getFecha();
 
-    std::set getAutores();  //devuelve el set de los autores relacionados a la publicacion
+    std::set<std::string> getAutores();  //devuelve el set de los autores relacionados a la publicacion
 };
 
 #endif
