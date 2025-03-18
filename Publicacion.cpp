@@ -31,6 +31,11 @@ DTFecha Publicacion::getFecha() {
     return this->fecha; //esto funciona???
 };
 
+DTRefer getDT() {
+    
+};
+
+
 Publicacion::~Publicacion() {
     
 };
