@@ -1,11 +1,11 @@
+//evitar multiples inclusiones
+#ifndef PUBLICACION_H //Si no esta definido
+#define PUBLICACION_H //Define
+
 #include <iostream>
 #include <string>
 #include <vector>
 #include "DTFecha.h"
-//que es esto? abajo
-#ifndef PUBLICACION.h
-#define PUBLICACION.h
-
 
 class Publicacion {
     private:
