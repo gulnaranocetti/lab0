@@ -25,11 +25,11 @@ class DTFecha {
 
     std::string toString(); //devuelve un string de fecha en el formato XX/XX/XXXX
 
-    bool operator=(DTFecha&);
+    /*bool operator=(DTFecha&);
 
     bool operator==(DTFecha&);
 
-    void operator!=(DTFecha&);
+    void operator!=(DTFecha&);*/
         
 };
 

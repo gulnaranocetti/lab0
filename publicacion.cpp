@@ -5,14 +5,7 @@ Publicacion::Publicacion() {
 
 };
 
-//se asumen definidas setDia, setMes y setAnio, y el nombre getAnio en lugar de getAño
-Publicacion::Publicacion(std::string DOI, std::string titulo, DTFecha fecha) {
-    this->DOI = DOI;
-    this->titulo = titulo;
-    this->fecha.setDia(fecha.getDia());
-    this->fecha.setMes(fecha.getMes());
-    this->fecha.setAnio(fecha.getAnio());
-};
+Publicacion::Publicacion(std::string DOI, std::string titulo, DTFecha fecha): DOI(DOI), titulo(titulo), fecha(fecha) {};
 
 void Publicacion::setDOI(std::string DOI) {
     this->DOI = DOI;
@@ -23,9 +16,7 @@ void Publicacion::setTitulo(std::string titulo) {
 };
 
 void Publicacion::setFecha(DTFecha fecha) {
-    this->fecha.setDia(fecha.getDia());
-    this->fecha.setMes(fecha.getMes());
-    this->fecha.setAnio(fecha.getAnio());
+    //va a ser analogo a como hagamos el constructor por parametros
 };
 
 std::string Publicacion::getDOI() {
@@ -41,5 +32,5 @@ DTFecha Publicacion::getFecha() {
 };
 
 Publicacion::~Publicacion() {
-
+    
 };

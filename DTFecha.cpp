@@ -35,9 +35,9 @@ int DTFecha::comparar(DTFecha& f2){
     return 0;
 }
 
-std::string DTFecha::toString(){ return this->Dia + '/' + this->Mes + '/' + this->Anio; }
+std::string DTFecha::toString() { return std::to_string(this->Dia) + '/' + std::to_string(this->Mes) + '/' + std::to_string(this->Anio); }
 
-bool DTFecha::operator==(DTFecha& f){ return f.comparar(this) == 0; }
+/*bool DTFecha::operator==(DTFecha& f){ return f.comparar(this) == 0; }
 
 bool DTFecha::operator!=(DTFecha& f){ return f.comparar(this) != 0; }
 
@@ -54,4 +54,4 @@ void DTFecha::operator=(DTFecha& f){
         this->Anio = f.getAnio();
 
     }
-}
+}*/
