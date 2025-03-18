@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "publicacion.h"	
+#include "Publicacion.h"	
 
 class paginaWeb : public Publicacion {
     private:
@@ -13,7 +13,7 @@ class paginaWeb : public Publicacion {
     public:
         ~paginaWeb();
 
-        paginaWeb(std::string, std::string, DTFecha, std::string, std::string)
+        paginaWeb(std::string, std::string, DTFecha, std::string, std::string);
 
         bool contienePalabra(std::string);
 

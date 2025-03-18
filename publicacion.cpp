@@ -1,4 +1,4 @@
-#include "publicacion.h"
+#include "Publicacion.h"
 #include "DTFecha.h"
 
 Publicacion::Publicacion() {
@@ -16,7 +16,7 @@ void Publicacion::setTitulo(std::string titulo) {
 };
 
 void Publicacion::setFecha(DTFecha fecha) {
-    //va a ser analogo a como hagamos el constructor por parametros
+    this->fecha = fecha;
 };
 
 std::string Publicacion::getDOI() {

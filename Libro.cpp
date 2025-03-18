@@ -4,7 +4,7 @@ Libro::Libro() {
     editorial = "";
 }
 
-Libro::Libro(std::string _editorial, DTFecha fecha, std::string titulo, std::string DOI) : Publicacion(DOI, fecha, titulo) {
+Libro::Libro(std::string _editorial, DTFecha fecha, std::string titulo, std::string DOI) : Publicacion(DOI, titulo, fecha) {
     editorial = _editorial;
 }
 

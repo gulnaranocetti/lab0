@@ -6,7 +6,7 @@ ArticuloRevista::ArticuloRevista() {
     extracto = "";
 }
 
-ArticuloRevista::ArticuloRevista(std::string _revista, std::string _extracto, DTFecha fecha, std::string titulo, std::string DOI) : publicacion(DOI, fecha, titulo) {
+ArticuloRevista::ArticuloRevista(std::string _revista, std::string _extracto, DTFecha fecha, std::string titulo, std::string DOI) : Publicacion(DOI, titulo, fecha) {
     revista = _revista;
     extracto = _extracto;
 }

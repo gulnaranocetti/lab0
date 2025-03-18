@@ -1,7 +1,7 @@
 #ifndef ARTICULOREVISTA_H
 #define ARTICULOREVISTA_H
 
-#include "publicacion.h"
+#include "Publicacion.h"
 
 class ArticuloRevista : public Publicacion {
     private:
@@ -21,6 +21,6 @@ class ArticuloRevista : public Publicacion {
         void setExtracto(std::string);
 
         bool contienePalabra(std::string);
-}
+};
 
 #endif // ARTICULOREVISTA_H

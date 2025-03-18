@@ -12,11 +12,13 @@
 class Investigador;
 
 class Publicacion {
-    private:
+    private: 
+        std::list<Investigador*> investigadores;
+        
+    protected:
         std::string DOI;
         std::string titulo;
         DTFecha fecha;
-        std::list<Investigador*> investigadores;
 
     public:
         Publicacion();
@@ -29,7 +31,7 @@ class Publicacion {
         DTFecha getFecha();
 
         DTRefer getDT();
-        bool contienePalabra(std::string); //no se implementa
+        virtual bool contienePalabra(std::string); //no se implementa
 
         ~Publicacion();
 };

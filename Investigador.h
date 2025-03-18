@@ -2,7 +2,7 @@
 #include <iostream>
 #include <list>
 #include "DTFecha.h"
-#include "publicacion.h"
+#include "Publicacion.h"
 
 
 
