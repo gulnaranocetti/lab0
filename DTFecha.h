@@ -15,8 +15,6 @@ class DTFecha {
 
     DTFecha(int,int,int); //constructor por parametros recibe dia, mes y año en ese orden devolviendo dia/mes/año como fecha
 
-    ~DTFecha();
-
     int getDia();
 
     int getAnio();

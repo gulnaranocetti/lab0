@@ -18,7 +18,6 @@ class DTRefer{
 
     DTRefer();
     DTRefer(std::string, std::string, DTFecha, std::set<std::string>); //constructor por parametros
-    ~DTRefer();
     std::string getDOI(); //devuelve el codigo DOI de la publicacion referida
     std::string getTitulo();
     DTFecha getFecha();
