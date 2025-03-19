@@ -39,7 +39,10 @@ DTRefer Publicacion::getDT() {
 
     std::list<Investigador*>::iterator iter = this->investigadores.begin(); //defino un iterador para la lista de investigadores
 
-    for ( iter ; iter != this->investigadores.end(); iter++ ){ autor.insert(*iter.getNombre()); }
+    for ( iter ; iter != this->investigadores.end(); iter++ ){ 
+        Investigador* aux = new Investigador();
+        autor.insert(*iter.getNombre()); 
+    }
 
     DTRefer res = DTRefer(doi, title, f, autor);
 
