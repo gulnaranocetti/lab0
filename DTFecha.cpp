@@ -53,7 +53,7 @@ bool DTFecha::operator>(const DTFecha& f) const { return this->comparar(f) == 1;
 
 bool DTFecha::operator<(const DTFecha& f) const { return this->comparar(f) == -1; }*/
 
-DTFecha DTFecha::operator=(DTFecha& f){
+DTFecha& DTFecha::operator=(DTFecha& f){
     
     if (this->comparar(f) != 0){
 
