@@ -6,6 +6,7 @@
 #include <string>
 #include <vector>
 #include <list>
+#include <set>
 #include "DTFecha.h"
 #include "DTRefer.h"
 

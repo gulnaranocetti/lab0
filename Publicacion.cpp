@@ -31,8 +31,19 @@ DTFecha Publicacion::getFecha() {
     return this->fecha; //esto funciona???
 };
 
-DTRefer getDT() {
-    
+DTRefer Publicacion::getDT() {
+    std::set<std::string> autor = {};
+    DTFecha f = DTFecha( this->getFecha() );
+    std::string doi = this->getDOI();
+    std::string title = this->getTitulo();
+
+    std::list<Investigador*>::iterator iter = this->investigadores.begin(); //defino un iterador para la lista de investigadores
+
+    for ( iter ; iter != this->investigadores.end(); iter++ ){ autor.insert(*iter.getNombre()); }
+
+    DTRefer res = DTRefer(doi, title, f, autor);
+
+    return res;
 };
 
 

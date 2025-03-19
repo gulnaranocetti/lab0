@@ -23,7 +23,7 @@ std::set<std::string> DTRefer::getAutores(){ return this->autores; }
 
 std::string DTRefer::getAutoresString() {
     std::string setString = "";
-    for (auto it = this->autores.begin(); it != this->autores.end(); it++) {
+    for (std::set<std::string>::iterator it = this->autores.begin(); it != this->autores.end(); it++) {
         if (*it == *this->autores.rbegin())
             setString += *it;
         else

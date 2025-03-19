@@ -12,6 +12,12 @@ DTFecha::DTFecha(int d,int m,int a){
     this->Anio = a;
 }
 
+DTFecha::DTFecha(DTFecha& f){
+    this->Dia = f.getDia();
+    this->Mes = f.getMes();
+    this->Anio = f.getAnio();
+}
+
 int DTFecha::getDia(){ return this->Dia; }
 
 int DTFecha::getAnio(){ return this->Anio; }
