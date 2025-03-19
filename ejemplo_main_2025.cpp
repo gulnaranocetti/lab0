@@ -107,6 +107,11 @@ void parte_i(){
 }
 
 void parte_j(){
+	/*Invocar la operación listarPublicaciones(1/1/2020,“UML”) para la
+	investigadora 0000-0003-1234-5678 (Carla Oliveri) e imprimir el resultado en consola
+	(un string por línea).*/
+
+	// creo que necesito que Carla este creada para poder usarla para invocar a la funcion
 }
 
 void parte_k(){
