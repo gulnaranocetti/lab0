@@ -1,0 +1,1 @@
+/*g++ -std=c++17 -Wall -Wextra -o programa Publicacion.cpp PaginaWeb.cpp Libro.cpp Investigador.cpp DTRefer.cpp DTFecha.cpp ArticuloRevista.cpp main.cpp*/
