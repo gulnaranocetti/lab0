@@ -2,12 +2,14 @@
 #include <iostream>
 #include <list>
 #include "DTFecha.h"
-#include "Publicacion.h"
+//#include "Publicacion.h"
 
 
 
 #ifndef INVESTIGADOR_H
 #define INVESTIGADOR_H
+
+class Publicacion;
 
 class Investigador{
     private:
@@ -22,7 +24,7 @@ class Investigador{
       void setORCID(std::string);
       void setNombre(std::string);
       void setInstitucion(std::string);
-      void setPublicacion(Publicacion&);
+      void setPublicacion(Publicacion*);
 
       std::string getORCID();
       std::string getNombre();

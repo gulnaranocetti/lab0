@@ -9,6 +9,7 @@
 #include <set>
 #include "DTFecha.h"
 #include "DTRefer.h"
+//#include "Investigador.h"
 
 class Investigador;
 

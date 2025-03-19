@@ -1,4 +1,5 @@
 #include "Publicacion.h"
+#include "Investigador.h"
 #include "DTFecha.h"
 
 Publicacion::Publicacion() {
@@ -37,11 +38,11 @@ DTRefer Publicacion::getDT() {
     std::string doi = this->getDOI();
     std::string title = this->getTitulo();
 
-    std::list<Investigador*>::iterator iter = this->investigadores.begin(); //defino un iterador para la lista de investigadores
+    //std::list<Investigador*>::iterator iter = this->investigadores.begin(); //defino un iterador para la lista de investigadores
 
-    for ( iter ; iter != this->investigadores.end(); iter++ ){ 
-        Investigador* aux = new Investigador();
-        autor.insert(*iter.getNombre()); 
+    for ( std::list<Investigador*>::iterator iter = this->investigadores.begin(); iter != this->investigadores.end(); iter++ ){ 
+        //Investigador* aux = new Investigador();
+        autor.insert((*iter)->getNombre()); 
     }
 
     DTRefer res = DTRefer(doi, title, f, autor);
