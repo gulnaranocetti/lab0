@@ -23,11 +23,11 @@ class DTFecha {
     int comparar(DTFecha& f2); //Devuelve 1 si fecha es > f2, 0 si fecha == f2 o -1 si fecha < f2
     std::string toString(); //devuelve un string de fecha en el formato XX/XX/XXXX
 
-    /*bool operator=(DTFecha&);
+    DTFecha& operator=(DTFecha&);
 
     bool operator==(DTFecha&);
 
-    void operator!=(DTFecha&);*/
+    void operator!=(DTFecha&);
         
 };
 

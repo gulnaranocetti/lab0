@@ -51,11 +51,11 @@ bool DTFecha::operator!=(const DTFecha& f) const { return this->comparar(f) != 0
 
 bool DTFecha::operator>(const DTFecha& f) const { return this->comparar(f) == 1; }
 
-bool DTFecha::operator<(const DTFecha& f) const { return this->comparar(f) == -1; }
+bool DTFecha::operator<(const DTFecha& f) const { return this->comparar(f) == -1; }*/
 
-DTFecha& DTFecha::operator=(const DTFecha& f){
+DTFecha& DTFecha::operator=(DTFecha& f){
     
-    if (this != f){
+    if (this->comparar(f) != 0){
 
         this->Dia = f.getDia();
         this->Mes = f.getMes();
@@ -63,4 +63,4 @@ DTFecha& DTFecha::operator=(const DTFecha& f){
 
     }
         return *this;
-}*/
+}
