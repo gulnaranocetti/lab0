@@ -17,7 +17,7 @@ void Publicacion::setTitulo(std::string titulo) {
 };
 
 void Publicacion::setFecha(DTFecha fecha) {
-    this->fecha = fecha;
+    this->fecha = DTFecha(fecha.getDia(), fecha.getMes(), getAnio());
 };
 
 std::string Publicacion::getDOI() {
