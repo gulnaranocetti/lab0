@@ -18,6 +18,8 @@ DTFecha::DTFecha(DTFecha& f){
     this->Anio = f.getAnio();
 }
 
+DTFecha::~DTFecha(){;}
+
 int DTFecha::getDia(){ return this->Dia; }
 
 int DTFecha::getAnio(){ return this->Anio; }

@@ -18,10 +18,13 @@ class DTRefer{
 
     DTRefer();
     DTRefer(std::string, std::string, DTFecha, std::set<std::string>); //constructor por parametros (DOI, Titulo, Fecha, Autores)
+    ~DTRefer();
+
     std::string getDOI(); //devuelve el codigo DOI de la publicacion referida
     std::string getTitulo();
     DTFecha getFecha();
     std::set<std::string> getAutores();  //devuelve el set de los autores relacionados a la publicacion
+    
     std::string getAutoresString();
     friend std::ostream &operator<<(std::ostream&, DTRefer&);
 };

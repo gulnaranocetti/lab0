@@ -12,19 +12,15 @@ class DTFecha {
     public:
 
     DTFecha(); //constructor devuelve la fecha 0/0/0
-
     DTFecha(int,int,int); //constructor por parametros recibe dia, mes y año en ese orden devolviendo dia/mes/año como fecha
-    
     DTFecha(DTFecha&); //constructor por parametros que copia un DTFecha 
+    ~DTFecha();
 
     int getDia();
-
     int getAnio();
-
     int getMes();
 
     int comparar(DTFecha& f2); //Devuelve 1 si fecha es > f2, 0 si fecha == f2 o -1 si fecha < f2
-
     std::string toString(); //devuelve un string de fecha en el formato XX/XX/XXXX
 
     /*bool operator=(DTFecha&);
