@@ -22,7 +22,7 @@ class Investigador{
       void setORCID(std::string);
       void setNombre(std::string);
       void setInstitucion(std::string);
-      //void setPublicacion(Publicacion&);
+      void setPublicacion(Publicacion&);
 
       std::string getORCID();
       std::string getNombre();
