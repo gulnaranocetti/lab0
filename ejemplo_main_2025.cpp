@@ -145,6 +145,10 @@ void parte_h(){
 }
 
 void parte_i(){
+    std::string doi = "10.4567/jkl012";
+    publicacion* eliminar = coleccion_getPublicacion(doi);
+    coleccion_eliminarPublicacion(eliminar);
+    //delete eliminar; no se si es correcto hacerle delete
 }
 
 void parte_j(){
