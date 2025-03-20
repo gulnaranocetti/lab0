@@ -21,6 +21,10 @@ void Publicacion::setFecha(DTFecha f) {
     this->fecha = aux;
 };
 
+void Publicacion::setInvestigador(Investigador* inv){
+    this->investigadores.push_back(inv);
+}
+
 std::string Publicacion::getDOI() {
     return this->DOI;
 };
@@ -29,13 +33,13 @@ std::string Publicacion::getTitulo() {
     return this->titulo;
 };
 
-DTFecha Publicacion::getFecha() {
+DTFecha& Publicacion::getFecha() {
     return this->fecha; //esto funciona???
 };
 
 DTRefer Publicacion::getDT() {
     std::set<std::string> autor = {};
-    DTFecha f = DTFecha( this->getFecha() );
+    DTFecha f = DTFecha(this->getFecha());
     std::string doi = this->getDOI();
     std::string title = this->getTitulo();
 

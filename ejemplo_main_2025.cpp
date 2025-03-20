@@ -103,6 +103,27 @@ void parte_f(){
 }
 
 void parte_g(){
+	Investigador* carla = coleccion_getInvestigador("0000-0003-1234-5678");
+	Investigador* alberto = coleccion_getInvestigador("0000-0001-8765-4321");
+
+	Publicacion* fundamentosPOO = coleccion_getPublicacion("10.1234/abc123");
+	Publicacion* utilidad_diagramasUML = coleccion_getPublicacion("10.4567/jkl012");
+	Publicacion* guíaUML = coleccion_getPublicacion("10.5678/mno345");
+	Publicacion* diagramasPrincipiantes = coleccion_getPublicacion("10.3456/ghi789");
+	Publicacion* patronesDiseno = coleccion_getPublicacion("10.2345/def456");
+
+	Publicacion* publicacionesCarla[4] = {fundamentosPOO, utilidad_diagramasUML, guíaUML, diagramasPrincipiantes};
+	Publicacion* publicacionesAlberto[3] = {fundamentosPOO, patronesDiseno, utilidad_diagramasUML};
+
+	for(int i = 0; i < 4; i++){
+		carla->setPublicacion(publicacionesCarla[i]);
+        publicacionesCarla[i]->setInvestigador(carla); 
+	}
+	
+	for(int i = 0; i < 3; i++){
+		alberto->setPublicacion(publicacionesAlberto[i]);
+		publicacionesAlberto[i]->setInvestigador(alberto); 
+	}
 }
 
 void parte_h(){

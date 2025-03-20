@@ -28,9 +28,10 @@ class Publicacion {
         void setDOI(std::string);
         void setTitulo(std::string);
         void setFecha(DTFecha);
+        void setInvestigador(Investigador*);
         std::string getDOI();
         std::string getTitulo();
-        DTFecha getFecha();
+        DTFecha& getFecha(); //agregue & pq habia un problema en getDT al pasar al constructor de DTfecha un parametro por valor en vez de por referencia
 
         DTRefer getDT();
         virtual bool contienePalabra(std::string) const = 0; //no se implementa
