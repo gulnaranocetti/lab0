@@ -92,7 +92,9 @@ void parte_d(){
 	std::string DOIs[5] = {"10.1234/abc123", "10.4567/jkl012", "10.2345/def456", "10.5678/mno345", "10.3456/ghi789"};
 
 	for(int i = 0; i < 5; i++){
-		std::cout << coleccion_getPublicacion(DOIs[i])->getDT() << std::endl;
+		DTRefer temp = coleccion_getPublicacion(DOIs[i])->getDT();
+		std::cout << temp << std::endl;
+		// std::cout << coleccion_getPublicacion(DOIs[i])->getDT() << std::endl; (no dejaba hacerlo) falta ver si pierde memoria por aca
 	}
 }
 
@@ -142,6 +144,14 @@ void parte_g(){
 }
 
 void parte_h(){
+	Investigador* carla = coleccion_getInvestigador("0000-0003-1234-5678");
+	DTFecha desde(10,12,2023);
+	std::list<std::string> publicacionesCarla = carla->listarPublicaciones(desde,"UML");
+
+	for(std::list<std::string>::iterator it = publicacionesCarla.begin(); it != publicacionesCarla.end(); it++){
+		std::cout << (coleccion_getPublicacion(*it))->getDOI() << std::endl;
+	}
+
 }
 
 void parte_i(){
