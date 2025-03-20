@@ -89,6 +89,11 @@ void parte_c(){
 }
 
 void parte_d(){
+	std::string DOIs[5] = {"10.1234/abc123", "10.4567/jkl012", "10.2345/def456", "10.5678/mno345", "10.3456/ghi789"};
+
+	for(int i = 0; i < 5; i++){
+		std::cout << coleccion_getPublicacion(DOIs[i])->getDT() << std::endl;
+	}
 }
 
 void parte_e(){
