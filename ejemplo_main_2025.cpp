@@ -120,9 +120,14 @@ void parte_j(){
 }
 
 void parte_k(){
+	/*std::string DOIs[] = {};
+
+	for(int i = 0; i < ; i++){
+		std::cout << coleccion_getPublicacion(DOIs[i])->getDT() << std::endl;
+	}*/
 }
 
-//esto lo tenemos que hacer?? lo agregamos nosotros
+//esto lo tenemos que hacer?? (si) lo agregamos nosotros
 void cleanUp() {
 
 }
