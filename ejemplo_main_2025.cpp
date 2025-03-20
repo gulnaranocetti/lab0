@@ -97,9 +97,24 @@ void parte_d(){
 }
 
 void parte_e(){
+	std::string ORCID1 = "0000-0003-1234-5678 ";
+	std::string nombre1 = "Carla Oliveri";
+	std::string institucion1 = "Universidad de la Republica";
+	Investigador* primero = new Investigador(ORCID1, nombre1, institucion1);
+	coleccion_guardarInvestigador(primero);
+
+	std::string ORCID2 = "0000-0001-8765-4321";
+	std::string nombre2 = "Alberto Santos";
+	std::string institucion2 = "Instituto Tecnico";
+	Investigador* segundo = new Investigador(ORCID2, nombre2, institucion2);
+	coleccion_guardarInvestigador(segundo);
 }
 
 void parte_f(){
+	//Imprimir en consola el resultado de ejecutar la operación toString para cada uno de los objetos Investigador creados.
+	for(std::list<Investigador*>::iterator it = investigadores.begin(); it != investigadores.end(); it++){
+		(*it)->toString();
+	}
 }
 
 void parte_g(){

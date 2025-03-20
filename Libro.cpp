@@ -24,8 +24,9 @@ void Libro::setPalabrasDestacadas(std::set<std::string> _palabrasDestacadas) {
     palabrasDestacadas = _palabrasDestacadas;
 }
 
-bool Libro::contienePalabra(std::string palabra) const { 
-    return (titulo.find(palabra) != std::string::npos || editorial.find(palabra) != std::string::npos || std::find(palabrasDestacadas.begin(), palabrasDestacadas.end(), palabra) != palabrasDestacadas.end());
+
+bool Libro::contienePalabra(std::string palabra) const {
+    return (std::find(palabrasDestacadas.begin(), palabrasDestacadas.end(), palabra) != palabrasDestacadas.end());
 }
 
 Libro::~Libro() {
