@@ -25,6 +25,10 @@ void Publicacion::setInvestigador(Investigador* inv){
     this->investigadores.push_back(inv);
 }
 
+void Publicacion::unsetInvestigador(Investigador* inv){
+    this->investigadores.remove(inv);
+}
+
 std::string Publicacion::getDOI() {
     return this->DOI;
 };

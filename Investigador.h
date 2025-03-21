@@ -25,6 +25,7 @@ class Investigador{
       void setNombre(std::string);
       void setInstitucion(std::string);
       void setPublicacion(Publicacion*);
+      void unsetPublicacion(Publicacion*);
 
       std::string getORCID();
       std::string getNombre();

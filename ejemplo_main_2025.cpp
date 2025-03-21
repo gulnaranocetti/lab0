@@ -158,6 +158,9 @@ void parte_h(){
 void parte_i(){
     std::string doi = "10.4567/jkl012";
     Publicacion* eliminar = coleccion_getPublicacion(doi); //es asi o Publicacion* eliminar = new coleccion_getPublicacion(doi);
+	
+	for(std::list<Investigador*>::iterator it = investigadores.begin(); it != investigadores.end(); it++){(*it)->unsetPublicacion(eliminar);}
+
     coleccion_eliminarPublicacion(eliminar);
     //delete eliminar; no se si es correcto hacerle delete
 }

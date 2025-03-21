@@ -29,6 +29,7 @@ class Publicacion {
         void setTitulo(std::string);
         void setFecha(DTFecha);
         void setInvestigador(Investigador*);
+        void unsetInvestigador(Investigador* inv);
         std::string getDOI();
         std::string getTitulo();
         DTFecha& getFecha(); //agregue & pq habia un problema en getDT al pasar al constructor de DTfecha un parametro por valor en vez de por referencia

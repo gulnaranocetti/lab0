@@ -20,6 +20,10 @@ void Investigador::setInstitucion(std::string ins){
 void Investigador::setPublicacion(Publicacion *pub){ 
     this->publicaciones.push_back(pub);
 }
+
+void Investigador::unsetPublicacion(Publicacion *pub){ 
+    this->publicaciones.remove(pub);
+}
  
 std::string Investigador::getORCID(){
     return ORCID;
