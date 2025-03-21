@@ -166,6 +166,14 @@ void parte_j(){
 	investigadora 0000-0003-1234-5678 (Carla Oliveri) e imprimir el resultado en consola
 	(un string por línea).*/
 
+	DTFecha fechaCarla = DTFecha(1, 1, 2020);
+	Investigador* carla = coleccion_getInvestigador("0000-0003-1234-5678");
+	std::list<std::string> publicacionesCarla = carla->listarPublicaciones(fechaCarla, "UML");
+
+	for(std::list<std::string>::iterator it = publicacionesCarla.begin(); it != publicacionesCarla.end(); it++) {
+		std::cout << (coleccion_getPublicacion(*it))->getDOI() << std::endl;
+	}
+
 	// creo que necesito que Carla este creada para poder usarla para invocar a la funcion
 }
 
