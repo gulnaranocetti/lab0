@@ -2,6 +2,7 @@
 #include "Publicacion.h"
 
 Investigador::Investigador(std::string ORCID, std::string nombre, std::string institucion) : ORCID(ORCID), nombre(nombre), institucion(institucion){
+    this->publicaciones = {};
 }
 
 void Investigador::setORCID(std::string orc){
@@ -33,10 +34,12 @@ std::string Investigador::getInstitucion(){
 std::list<std::string> Investigador::listarPublicaciones(DTFecha desde, std::string palabra){
     std::list<std::string> res;
     for(std::list<Publicacion*>::iterator it = publicaciones.begin(); it != publicaciones.end(); it++){
-        if((*it)->getFecha().comparar(desde) == 1 && (*it)->contienePalabra(palabra)){
+        if(((*it)->getFecha().comparar(desde) == 1 || (*it)->getFecha().comparar(desde) == 0)&& (*it)->contienePalabra(palabra)){
+            
             res.push_back((*it)->getDOI());
         } 
     }
+    
     return res;
 }
 

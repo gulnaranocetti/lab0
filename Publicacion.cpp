@@ -6,7 +6,7 @@ Publicacion::Publicacion() {
 
 };
 
-Publicacion::Publicacion(std::string DOI, std::string titulo, DTFecha fecha): DOI(DOI), titulo(titulo), fecha(fecha) {};
+Publicacion::Publicacion(std::string DOI, std::string titulo, DTFecha fecha): DOI(DOI), titulo(titulo), fecha(fecha) {;};
 
 void Publicacion::setDOI(std::string DOI) {
     this->DOI = DOI;
@@ -46,8 +46,8 @@ DTRefer Publicacion::getDT() {
     //std::list<Investigador*>::iterator iter = this->investigadores.begin(); //defino un iterador para la lista de investigadores
 
     for ( std::list<Investigador*>::iterator iter = this->investigadores.begin(); iter != this->investigadores.end(); iter++ ){ 
-        //Investigador* aux = new Investigador();
-        autor.insert((*iter)->getNombre()); 
+        std::string aux = (*iter)->getNombre();
+        autor.insert(aux);
     }
 
     DTRefer res = DTRefer(doi, title, f, autor);

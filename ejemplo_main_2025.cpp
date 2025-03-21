@@ -99,7 +99,7 @@ void parte_d(){
 }
 
 void parte_e(){
-	std::string ORCID1 = "0000-0003-1234-5678 ";
+	std::string ORCID1 = "0000-0003-1234-5678";
 	std::string nombre1 = "Carla Oliveri";
 	std::string institucion1 = "Universidad de la Republica";
 	Investigador* primero = new Investigador(ORCID1, nombre1, institucion1);
@@ -122,7 +122,7 @@ void parte_f(){
 void parte_g(){
 	Investigador* carla = coleccion_getInvestigador("0000-0003-1234-5678");
 	Investigador* alberto = coleccion_getInvestigador("0000-0001-8765-4321");
-
+	
 	Publicacion* fundamentosPOO = coleccion_getPublicacion("10.1234/abc123");
 	Publicacion* utilidad_diagramasUML = coleccion_getPublicacion("10.4567/jkl012");
 	Publicacion* guíaUML = coleccion_getPublicacion("10.5678/mno345");
@@ -131,6 +131,7 @@ void parte_g(){
 
 	Publicacion* publicacionesCarla[4] = {fundamentosPOO, utilidad_diagramasUML, guíaUML, diagramasPrincipiantes};
 	Publicacion* publicacionesAlberto[3] = {fundamentosPOO, patronesDiseno, utilidad_diagramasUML};
+
 
 	for(int i = 0; i < 4; i++){
 		carla->setPublicacion(publicacionesCarla[i]);
@@ -148,7 +149,7 @@ void parte_h(){
 	DTFecha desde(10,12,2023);
 	std::list<std::string> publicacionesCarla = carla->listarPublicaciones(desde,"UML");
 
-	for(std::list<std::string>::iterator it = publicacionesCarla.begin(); it != publicacionesCarla.end(); it++){
+	for(std::list<std::string>::iterator it = publicacionesCarla.begin(); it != publicacionesCarla.end(); ++it){
 		std::cout << (coleccion_getPublicacion(*it))->getDOI() << std::endl;
 	}
 
@@ -169,20 +170,22 @@ void parte_j(){
 	DTFecha fechaCarla = DTFecha(1, 1, 2020);
 	Investigador* carla = coleccion_getInvestigador("0000-0003-1234-5678");
 	std::list<std::string> publicacionesCarla = carla->listarPublicaciones(fechaCarla, "UML");
-
+	
 	for(std::list<std::string>::iterator it = publicacionesCarla.begin(); it != publicacionesCarla.end(); it++) {
-		std::cout << (coleccion_getPublicacion(*it))->getDOI() << std::endl;
+		std::string temp = (coleccion_getPublicacion(*it))->getDOI();
+		std::cout << temp << std::endl;
 	}
 
 	// creo que necesito que Carla este creada para poder usarla para invocar a la funcion
 }
 
 void parte_k(){
-	/*std::string DOIs[] = {};
+	std::string DOIs[5] = {"10.1234/abc123", "10.4567/jkl012", "10.2345/def456", "10.5678/mno345", "10.3456/ghi789"};
 
-	for(int i = 0; i < ; i++){
-		std::cout << coleccion_getPublicacion(DOIs[i])->getDT() << std::endl;
-	}*/
+	for(int i = 0; i < 5; i++){
+		DTRefer temp = coleccion_getPublicacion(DOIs[i])->getDT();
+		std::cout << temp << std::endl;
+	}
 }
 
 //esto lo tenemos que hacer?? (si) lo agregamos nosotros
