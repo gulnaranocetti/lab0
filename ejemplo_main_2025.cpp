@@ -159,7 +159,11 @@ void parte_i(){
     std::string doi = "10.4567/jkl012";
     Publicacion* eliminar = coleccion_getPublicacion(doi); //es asi o Publicacion* eliminar = new coleccion_getPublicacion(doi);
 	
-	for(std::list<Investigador*>::iterator it = investigadores.begin(); it != investigadores.end(); it++){(*it)->unsetPublicacion(eliminar);}
+	for(std::list<Investigador*>::iterator it = investigadores.begin(); it != investigadores.end(); it++){
+		
+		(*it)->unsetPublicacion(eliminar);
+		eliminar->unsetInvestigador(*it);
+	}
 
     coleccion_eliminarPublicacion(eliminar);
     //delete eliminar; no se si es correcto hacerle delete
@@ -183,9 +187,9 @@ void parte_j(){
 }
 
 void parte_k(){
-	std::string DOIs[5] = {"10.1234/abc123", "10.4567/jkl012", "10.2345/def456", "10.5678/mno345", "10.3456/ghi789"};
+	std::string DOIs[4] = {"10.1234/abc123", "10.2345/def456", "10.5678/mno345", "10.3456/ghi789"};
 
-	for(int i = 0; i < 5; i++){
+	for(int i = 0; i < 4; i++){
 		DTRefer temp = coleccion_getPublicacion(DOIs[i])->getDT();
 		std::cout << temp << std::endl;
 	}
