@@ -61,5 +61,5 @@ DTRefer Publicacion::getDT() {
 
 
 Publicacion::~Publicacion() {
-    
+    this->investigadores.clear();
 };

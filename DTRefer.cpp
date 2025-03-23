@@ -14,8 +14,6 @@ DTRefer::DTRefer(std::string codigo, std::string title, DTFecha f, std::set<std:
     this->autores = autors;*/
 }
 
-DTRefer::~DTRefer(){;}
-
 std::string DTRefer::getDOI(){ return this->DOI; } //devuelve el codigo DOI de la publicacion referida
 
 std::string DTRefer::getTitulo(){ return this->titulo; }

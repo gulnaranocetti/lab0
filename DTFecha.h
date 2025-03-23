@@ -14,7 +14,6 @@ class DTFecha {
     DTFecha(); //constructor devuelve la fecha 0/0/0
     DTFecha(int,int,int); //constructor por parametros recibe dia, mes y año en ese orden devolviendo dia/mes/año como fecha
     DTFecha(DTFecha&); //constructor por parametros que copia un DTFecha 
-    ~DTFecha();
 
     int getDia();
     int getAnio();

@@ -37,7 +37,7 @@ class Publicacion {
         DTRefer getDT();
         virtual bool contienePalabra(std::string) const = 0; //no se implementa
 
-        ~Publicacion();
+        virtual ~Publicacion();
 };
 
 #endif
