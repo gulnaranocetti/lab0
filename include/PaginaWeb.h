@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Publicacion.h"	
+#include "../include/Publicacion.h"	
 
 class PaginaWeb : public Publicacion {
     private:

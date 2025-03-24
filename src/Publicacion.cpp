@@ -1,6 +1,6 @@
-#include "Publicacion.h"
-#include "Investigador.h"
-#include "DTFecha.h"
+#include "../include/Publicacion.h"
+#include "../include/Investigador.h"
+#include "../include/DTFecha.h"
 
 Publicacion::Publicacion() {
 

@@ -1,4 +1,4 @@
-#include "PaginaWeb.h"
+#include "../include/PaginaWeb.h"
 
 PaginaWeb::~PaginaWeb(){}
 

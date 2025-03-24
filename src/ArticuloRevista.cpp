@@ -1,4 +1,4 @@
-#include "ArticuloRevista.h"
+#include "../include/ArticuloRevista.h"
 
 ArticuloRevista::ArticuloRevista() {
     revista = "";

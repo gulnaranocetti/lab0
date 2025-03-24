@@ -1,7 +1,7 @@
 #ifndef ARTICULOREVISTA_H
 #define ARTICULOREVISTA_H
 
-#include "Publicacion.h"
+#include "../include/Publicacion.h"
 
 class ArticuloRevista : public Publicacion {
     private:

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "DTFecha.h"
+#include "../include/DTFecha.h"
 #include <set>
 
 #ifndef DTREFER_h

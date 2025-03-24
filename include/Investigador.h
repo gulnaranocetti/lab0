@@ -1,7 +1,7 @@
 #include <string>
 #include <iostream>
 #include <list>
-#include "DTFecha.h"
+#include "../include/DTFecha.h"
 //#include "Publicacion.h"
 
 

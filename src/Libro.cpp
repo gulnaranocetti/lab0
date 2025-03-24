@@ -1,4 +1,4 @@
-#include "Libro.h"
+#include "../include/Libro.h"
 
 Libro::Libro() {
     editorial = "";
