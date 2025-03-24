@@ -1,13 +1,13 @@
 #include <iostream>
 #include <list>
 #include <map>
-#include "Publicacion.h"
-#include "Investigador.h"
-#include "Libro.h"
-#include "ArticuloRevista.h"
-#include "PaginaWeb.h"
-#include "DTRefer.h"
-#include "DTFecha.h"
+#include "../include/Publicacion.h"
+#include "../include/Investigador.h"
+#include "../include/Libro.h"
+#include "../include/ArticuloRevista.h"
+#include "../include/PaginaWeb.h"
+#include "../include/DTRefer.h"
+#include "../include/DTFecha.h"
 
 
 std::list<Publicacion*> publicaciones;

@@ -1,7 +1,7 @@
 #ifndef LIBRO_H
 #define LIBRO_H
 
-#include "../include/Publicacion.h"
+#include "Publicacion.h"
 
 #include <set>
 #include <string>

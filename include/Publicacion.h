@@ -7,8 +7,8 @@
 #include <vector>
 #include <list>
 #include <set>
-#include "../include/DTFecha.h"
-#include "../include/DTRefer.h"
+#include "DTFecha.h"
+#include "DTRefer.h"
 //#include "Investigador.h"
 
 class Investigador;

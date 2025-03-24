@@ -1,14 +1,13 @@
 #include <iostream>
 #include <list>
 #include <map>
-#include "Publicacion.h"
-#include "Investigador.h"
-#include "Libro.h"
-#include "ArticuloRevista.h"
-#include "PaginaWeb.h"
-#include "DTRefer.h"
-#include "DTFecha.h"
-
+#include "include/Publicacion.h"
+#include "include/Investigador.h"
+#include "include/Libro.h"
+#include "include/ArticuloRevista.h"
+#include "include/PaginaWeb.h"
+#include "include/DTRefer.h"
+#include "include/DTFecha.h"
 
 std::list<Publicacion*> publicaciones;
 std::map<std::string, Publicacion*> map_publicaciones;
@@ -43,7 +42,10 @@ Publicacion* coleccion_getPublicacion(std::string DOI){
 void parte_a(){
 	std::string revista1 = "Programación Avanzada";
 	std::string extracto1 = "Introduccion a los principios fundamentales de la programacion orientada a objetos, explicando sus conceptos clave como clases, objetos, herencia y polimorfismo.";
-	DTFecha fecha1 = DTFecha(15, 5, 2023);
+    int dia = 15;
+    int mes = 5;
+    int anio = 2023;
+	DTFecha fecha1 = DTFecha(dia, mes, anio);
 	std::string titulo1 = "Fundamentos de POO";
 	std::string DOI1 = "10.1234/abc123";
 	ArticuloRevista* primero =  new ArticuloRevista(revista1, extracto1, fecha1, titulo1, DOI1);
