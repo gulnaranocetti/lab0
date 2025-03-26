@@ -102,7 +102,19 @@ void parte_d(){
 	std::string DOIs[5] = {"10.1234/abc123", "10.4567/jkl012", "10.2345/def456", "10.5678/mno345", "10.3456/ghi789"};
 
 	for(int i = 0; i < 5; i++){
-		DTRefer temp = coleccion_getPublicacion(DOIs[i])->getDT();
+        std::string DOId = coleccion_getPublicacion(DOIs[i])->getDT().getDOI();
+        std::string titulod = coleccion_getPublicacion(DOIs[i])->getDT().getTitulo();
+        //DTFecha fechad = coleccion_getPublicacion(DOIs[i])->getDT().getFecha();
+
+        int dia = coleccion_getPublicacion(DOIs[i])->getDT().getFecha().getDia();
+        int mes = coleccion_getPublicacion(DOIs[i])->getDT().getFecha().getMes();
+        int anio = coleccion_getPublicacion(DOIs[i])->getDT().getFecha().getAnio();
+        DTFecha fechad(dia, mes, anio);
+
+
+        std::set<std::string> autoresd = coleccion_getPublicacion(DOIs[i])->getDT().getAutores();
+		//DTRefer temp = coleccion_getPublicacion(DOIs[i])->getDT();
+        DTRefer temp(DOId, titulod, fechad, autoresd);
 		std::cout << temp << std::endl;
 		// std::cout << coleccion_getPublicacion(DOIs[i])->getDT() << std::endl; (no dejaba hacerlo) falta ver si pierde memoria por aca
 	}
@@ -200,7 +212,22 @@ void parte_k(){
 	std::string DOIs[4] = {"10.1234/abc123", "10.2345/def456", "10.5678/mno345", "10.3456/ghi789"};
 
 	for(int i = 0; i < 4; i++){
-		DTRefer temp = coleccion_getPublicacion(DOIs[i])->getDT();
+		//DTRefer temp = coleccion_getPublicacion(DOIs[i])->getDT();
+
+        std::string DOIk = coleccion_getPublicacion(DOIs[i])->getDT().getDOI();
+        std::string titulok = coleccion_getPublicacion(DOIs[i])->getDT().getTitulo();
+        //DTFecha fechad = coleccion_getPublicacion(DOIs[i])->getDT().getFecha();
+
+        int dia = coleccion_getPublicacion(DOIs[i])->getDT().getFecha().getDia();
+        int mes = coleccion_getPublicacion(DOIs[i])->getDT().getFecha().getMes();
+        int anio = coleccion_getPublicacion(DOIs[i])->getDT().getFecha().getAnio();
+        DTFecha fechak(dia, mes, anio);
+
+
+        std::set<std::string> autoresk = coleccion_getPublicacion(DOIs[i])->getDT().getAutores();
+		//DTRefer temp = coleccion_getPublicacion(DOIs[i])->getDT();
+        DTRefer temp(DOIk, titulok, fechak, autoresk);
+
 		std::cout << temp << std::endl;
 	}
 }

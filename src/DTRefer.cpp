@@ -37,3 +37,10 @@ std::ostream &operator<<(std::ostream &os, DTRefer &refer) {
     os << refer.getDOI() << "->" << refer.getTitulo() << "(" << (refer.getFecha()).toString() << ")/" << refer.getAutoresString();
     return os;
 }
+
+/*DTRefer& DTRefer::operator=(DTRefer& refer) {
+    this->DOI = refer.getDOI();
+    this->titulo = refer.getTitulo();
+    this->fecha = refer.getFecha();
+
+};*/
