@@ -1,10 +1,10 @@
 #include "../include/DTRefer.h"
 
-DTRefer::DTRefer(){
+DTRefer::DTRefer():fecha(){
     this->DOI = ' ';
     this->titulo = ' ';
-    DTFecha aux = DTFecha();
-    this->fecha = aux;
+    //DTFecha aux();
+    //this->fecha = aux;
 }
 
 DTRefer::DTRefer(std::string codigo, std::string title, DTFecha f, std::set<std::string> autors): DOI(codigo), titulo(title), fecha(f), autores(autors) { //constructor por parametros

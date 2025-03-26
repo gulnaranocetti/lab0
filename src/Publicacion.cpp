@@ -17,7 +17,7 @@ void Publicacion::setTitulo(std::string titulo) {
 };
 
 void Publicacion::setFecha(DTFecha f) {
-    DTFecha aux = DTFecha(f.getDia(), f.getMes(), f.getAnio());
+    DTFecha aux(f.getDia(), f.getMes(), f.getAnio());
     this->fecha = aux;
 };
 
@@ -42,8 +42,8 @@ DTFecha& Publicacion::getFecha() {
 };
 
 DTRefer Publicacion::getDT() {
-    std::set<std::string> autor = {};
-    DTFecha f = DTFecha(this->getFecha());
+    std::set<std::string> autor;
+    DTFecha f(this->getFecha());
     std::string doi = this->getDOI();
     std::string title = this->getTitulo();
 
@@ -54,7 +54,7 @@ DTRefer Publicacion::getDT() {
         autor.insert(aux);
     }
 
-    DTRefer res = DTRefer(doi, title, f, autor);
+    DTRefer res(doi, title, f, autor);
 
     return res;
 };
