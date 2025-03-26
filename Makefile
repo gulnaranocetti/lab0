@@ -25,3 +25,7 @@ $(ODIR)/%.o: $(CPPDIR)/%.cpp $(HDIR)/%.h
 
 clean:
 	rm -f $(ODIR)/.o.o main
+
+run: all
+	./main
+
