@@ -12,22 +12,25 @@ OS   = $(MODULOS:%=$(ODIR)/%.o)
 CC = g++
 OPCIONES = -std=c++98 -Wall -Wextra -I$(HDIR)
 
-all: main
+all: programa
 
-main: main.o $(OS)
-	$(CC) -o main main.o $(OS) $(OPCIONES)
+$(ODIR):
+	mkdir -p $(ODIR)
 
-main.o: main.cpp
-	$(CC) $(OPCIONES) -c main.cpp -o main.o
+programa: |$(ODIR) $(ODIR)/main.o $(OS)
+	$(CC) -o programa $(ODIR)/main.o $(OS) $(OPCIONES)
+
+$(ODIR)/main.o: main.cpp
+	$(CC) $(OPCIONES) -c main.cpp -o $(ODIR)/main.o
 
 $(ODIR)/%.o: $(CPPDIR)/%.cpp $(HDIR)/%.h
 	$(CC) $(OPCIONES) -c $< -o $@
 
 clean:
-	rm -f $(ODIR)/.o.o main
+	rm -f $(ODIR)/*.o programa
 
 run: all
-	./main
+	./programa
 
 entrega:
 	zip -r grupo21_lab0.zip $(HDIR) $(CPPDIR) Makefile

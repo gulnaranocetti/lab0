@@ -20,7 +20,7 @@ class ArticuloRevista : public Publicacion {
         void setRevista(std::string);
         void setExtracto(std::string);
 
-        bool contienePalabra(std::string) const override;
+        bool contienePalabra(std::string) const;
 };
 
 #endif // ARTICULOREVISTA_H

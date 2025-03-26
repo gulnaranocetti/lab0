@@ -27,7 +27,7 @@ class Libro : public Publicacion {
         void setEditorial(std::string);
         void setPalabrasDestacadas(std::set<std::string>);
 
-        bool contienePalabra(std::string) const override;
+        bool contienePalabra(std::string) const;
 };
 
 #endif // LIBRO_H

@@ -15,7 +15,7 @@ class PaginaWeb : public Publicacion {
 
         PaginaWeb(std::string, std::string, DTFecha, std::string, std::string);
 
-        bool contienePalabra(std::string) const override;
+        bool contienePalabra(std::string) const;
 
         void setUrl(std::string);
         void setCont(std::string);
