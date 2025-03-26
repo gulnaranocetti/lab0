@@ -31,5 +31,5 @@ bool ArticuloRevista::contienePalabra(std::string palabra) const {
 }
 
 ArticuloRevista::~ArticuloRevista() {
-    // Destructor
+   ; // Destructor
 }

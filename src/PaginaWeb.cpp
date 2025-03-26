@@ -1,6 +1,6 @@
 #include "../include/PaginaWeb.h"
 
-PaginaWeb::~PaginaWeb(){}
+PaginaWeb::~PaginaWeb(){;}
 
 void PaginaWeb::setUrl(std::string url){
     this->url = url;

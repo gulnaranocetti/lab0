@@ -188,7 +188,7 @@ void parte_i(){
 	}
 
     coleccion_eliminarPublicacion(eliminar);
-    //delete eliminar; no se si es correcto hacerle delete
+    delete eliminar; //no se si es correcto hacerle delete
 }
 
 void parte_j(){

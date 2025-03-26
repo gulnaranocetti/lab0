@@ -30,5 +30,5 @@ bool Libro::contienePalabra(std::string palabra) const {
 }
 
 Libro::~Libro() {
-    // Destructor
+    ;
 }
