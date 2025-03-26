@@ -29,3 +29,5 @@ clean:
 run: all
 	./main
 
+entrega:
+	zip -r grupo21_lab0.zip $(HDIR) $(CPPDIR) Makefile
