@@ -45,7 +45,7 @@ void parte_a(){
     int dia = 15;
     int mes = 5;
     int anio = 2023;
-	DTFecha fecha1 = DTFecha(dia, mes, anio);
+	DTFecha fecha1(dia, mes, anio);
 	std::string titulo1 = "Fundamentos de POO";
 	std::string DOI1 = "10.1234/abc123";
 	ArticuloRevista* primero =  new ArticuloRevista(revista1, extracto1, fecha1, titulo1, DOI1);
@@ -53,7 +53,7 @@ void parte_a(){
 
 	std::string revista2 = "Modelado de Software";
 	std::string extracto2 = "Ejercicio empirico de como los diagramas UML pueden ayudar en el proceso y documentacion de software, cubriendo los tipos mas importantes utilizados, como clases.";
-	DTFecha fecha2 = DTFecha(10, 2, 2024);
+	DTFecha fecha2(10, 2, 2024);
 	std::string titulo2 = "Utilidad de diagramas UML";
 	std::string DOI2 = "10.4567/jkl012";
 	ArticuloRevista* segundo = new ArticuloRevista(revista2, extracto2, fecha2, titulo2, DOI2);
@@ -62,19 +62,27 @@ void parte_a(){
 
 void parte_b(){
 	std::string editorial3 = "Software Design";
-	DTFecha fecha3 = DTFecha(20, 8, 2022);
+	DTFecha fecha3(20, 8, 2022);
 	std::string titulo3 = "Patrones de Diseno en c++";
 	std::string DOI3 = "10.2345/def456";
-	std::set<std::string> keyWords3 = {"Diseno", "OOP", "Class"};
+	//std::set<std::string> keyWords3 = {"Diseno", "OOP", "Class"};
+    std::set<std::string> keyWords3;
+    keyWords3.insert("Disenio");
+    keyWords3.insert("OOP");
+    keyWords3.insert("Class");
 	Libro* tercero = new Libro(editorial3, fecha3, titulo3, DOI3);
 	tercero->setPalabrasDestacadas(keyWords3);
 	coleccion_guardarPublicacion(tercero);
 
 	std::string editorial4 = "IEEE";
-	DTFecha fecha4 = DTFecha(20, 8, 2022);
+	DTFecha fecha4(20, 8, 2022);
 	std::string titulo4 = "Guia de UML";
 	std::string DOI4 = "10.5678/mno345";
-	std::set<std::string> keyWords4 = {"Diagramas", "UML", "Software", "Modelado"};
+    std::set<std::string> keyWords4;
+    keyWords4.insert("Diagramas");
+    keyWords4.insert("UML");
+    keyWords4.insert("Software");
+    keyWords4.insert("Modelado");
 	Libro* cuarto = new Libro(editorial4, fecha4, titulo4, DOI4);
 	cuarto->setPalabrasDestacadas(keyWords4);
 	coleccion_guardarPublicacion(cuarto);
@@ -83,7 +91,7 @@ void parte_b(){
 void parte_c(){
 	std::string DOI5 = "10.3456/ghi789";
 	std::string titulo5 = "Diagramas para Principiantes";
-	DTFecha fecha5 = DTFecha(20, 10, 2024);
+	DTFecha fecha5(20, 10, 2024);
 	std::string url5 = "www.umlparaprincipiantes.com";
 	std::string contenido5 = "En esta pagina web se presenta una gui completa sobre los diagramas UML, abordando los diagramas de casos de uso, de clases, de secuencia y de actividades.";
 	PaginaWeb* quinto = new PaginaWeb(DOI5, titulo5, fecha5, url5, contenido5);
@@ -176,7 +184,7 @@ void parte_j(){
 	investigadora 0000-0003-1234-5678 (Carla Oliveri) e imprimir el resultado en consola
 	(un string por línea).*/
 
-	DTFecha fechaCarla = DTFecha(1, 1, 2020);
+	DTFecha fechaCarla(1, 1, 2020);
 	Investigador* carla = coleccion_getInvestigador("0000-0003-1234-5678");
 	std::list<std::string> publicacionesCarla = carla->listarPublicaciones(fechaCarla, "UML");
 	
