@@ -41,7 +41,11 @@ int DTFecha::comparar(DTFecha& f2){
     return 0;
 }
 
-std::string DTFecha::toString() { return std::to_string(this->Dia) + '/' + std::to_string(this->Mes) + '/' + std::to_string(this->Anio); }
+std::string DTFecha::toString() { 
+    std::ostringstream oss;
+    oss << this->Dia << '/' << this->Mes << '/' << this->Anio;
+    return oss.str(); 
+}
 
 /*bool DTFecha::operator==(const DTFecha& f) const { return this->comparar(f) == 0; }
 

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <sstream>
 #ifndef DTFECHA_h
 #define DTFECHA_h
 

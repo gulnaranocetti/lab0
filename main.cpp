@@ -234,14 +234,14 @@ void parte_k(){
 
 //esto lo tenemos que hacer?? (si) lo agregamos nosotros
 void cleanUp() {
-	for (Publicacion* p : publicaciones){
-		delete p;
+	for (std::list<Publicacion*>::iterator p = publicaciones.begin(); p != publicaciones.end(); p++){
+		delete (*p);
 	}
 	publicaciones.clear();
 	map_publicaciones.clear();
 
-	for (Investigador* i : investigadores){
-		delete i;
+	for (std::list<Investigador*>::iterator i = investigadores.begin(); i != investigadores.end(); i++){
+		delete (*i);
 	}
 	investigadores.clear();
 	map_investigadores.clear();
