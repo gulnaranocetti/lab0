@@ -33,4 +33,4 @@ run: all
 	./programa
 
 entrega:
-	zip -r grupo21_lab0.zip $(HDIR) $(CPPDIR) Makefile
+	zip -r grupo21_lab0.zip $(HDIR) $(CPPDIR) Makefile main.cpp
